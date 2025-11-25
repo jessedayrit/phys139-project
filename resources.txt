@@ -1,0 +1,3 @@
+Source Paper: https://quantum-journal.org/papers/q-2018-01-29-48/pdf/
+Model source: https://github.com/baireuther/neural_network_decoder/tree/arXiv1705p07855
+Simulator source: https://github.com/baireuther/circuit_model
