@@ -645,7 +645,7 @@ if __name__ == '__main__':
   # mode = 0: training data set, seeds from 0 ... N_train
   # mode = 1: validation data set, seeds from 10**8 ... 10**8 + N_validation
   # mode = 2: testing data set, seeds from 2*10**8 ... 2*10**8 + N_test
-  mode = 2
+  mode = 1
 
   """ WARNING: Existing databases will be overwritten! """
   # Directory where the database will be stored
@@ -702,13 +702,15 @@ if __name__ == '__main__':
   # Each data set contains N_samples examples, which consists of n_steps_min to
   # n_steps_max error cycles.
 
-  # original values: 10^6, 10^4, 10^4
+  # original values: 4* 10^6, 10^4, 5* 10^4
+  # 11,20; 81,100; 1,500
+
 
   if mode == 0:
-    N_samples = 4 * 10**4
+    N_samples = 1 * 10**5
     n_steps_min, n_steps_max = 11, 20
   elif mode == 1:
-    N_samples = 10**3
+    N_samples = 1 * 10**4
     n_steps_min, n_steps_max = 81, 100
   elif mode == 2:
     N_samples = 5 * 10**3

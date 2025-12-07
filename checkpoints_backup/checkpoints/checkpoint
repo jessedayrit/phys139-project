@@ -1,0 +1,2 @@
+model_checkpoint_path: "temp_change_network_ff2"
+all_model_checkpoint_paths: "temp_change_network_ff2"

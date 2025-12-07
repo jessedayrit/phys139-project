@@ -422,9 +422,6 @@ class Decoder:
 
     # get and set length information
     len1 = np.frombuffer(length, dtype=int)[0]
-    print(length)
-    print(len1)
-
     # the second length is set by n_steps_net2, except if len1 is shorter
     len2 = min(len1, self.n_steps_net2)
 
