@@ -150,7 +150,7 @@ class DatabaseIO:
     return syndr1_l, syndr2_l, fsyndr_l, len1_l, len2_l, parity_l
 
   def gen_batches(self, batch_size, n_batches, data_type, oversample=False,
-                  max_steps=None):
+                  max_steps=500):
     """ a genererator to generate the training, validation, and test
         batches
 
@@ -180,6 +180,10 @@ class DatabaseIO:
     else:
       raise ValueError("The only allowed data_types are: 'training', "
                       "'validation' and 'test'.")
+    
+    if (data_type == "test"):
+      oversample = True
+
     if oversample:
       c.execute("SELECT events, err_signal, parities " +
                 "FROM data ORDER BY RANDOM() LIMIT ?",

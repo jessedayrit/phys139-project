@@ -645,7 +645,7 @@ if __name__ == '__main__':
   # mode = 0: training data set, seeds from 0 ... N_train
   # mode = 1: validation data set, seeds from 10**8 ... 10**8 + N_validation
   # mode = 2: testing data set, seeds from 2*10**8 ... 2*10**8 + N_test
-  mode = 1
+  mode = 2
 
   """ WARNING: Existing databases will be overwritten! """
   # Directory where the database will be stored
@@ -714,7 +714,7 @@ if __name__ == '__main__':
     n_steps_min, n_steps_max = 81, 100
   elif mode == 2:
     N_samples = 5 * 10**3
-    n_steps_min, n_steps_max = 1, 500
+    n_steps_min, n_steps_max = 10, 500
 
   # Generate seeds.
   seeds = range(N0, N0 + N_samples)
