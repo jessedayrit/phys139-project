@@ -423,3 +423,6 @@ db/*.db
 db/*/*.db
 db/variable_cycles/
 db/variable_ratio/
+
+# pdf files
+*.pdf

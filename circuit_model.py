@@ -645,14 +645,23 @@ if __name__ == '__main__':
   # mode = 0: training data set, seeds from 0 ... N_train
   # mode = 1: validation data set, seeds from 10**8 ... 10**8 + N_validation
   # mode = 2: testing data set, seeds from 2*10**8 ... 2*10**8 + N_test
-  mode = 2
+  mode = 0
+
+  # # # PARAMETERS OF THE ERROR MODEL # # #
+
+  # (Approximate) physical error rate per cycle, assuming px=py=pz.
+  p_phys = 0.01
+
+  # In figure 4 of [3] we increase the y-error rate using a prefactor fy,
+  # from fy=0 to fy=2. fy=1 corresponds to an isotropic error model.
+  fy = 1
 
   """ WARNING: Existing databases will be overwritten! """
   # Directory where the database will be stored
   db_path = "db/"
 
   # The file name will be base + suffix
-  base = "surf17"
+  base = f"surf17BigBoy"
 
   # The suffix is generate according to the mode.
   if mode == 0:
@@ -707,14 +716,14 @@ if __name__ == '__main__':
 
 
   if mode == 0:
-    N_samples = 1 * 10**5
+    N_samples = 1 * 10**6
     n_steps_min, n_steps_max = 11, 20
   elif mode == 1:
     N_samples = 1 * 10**4
     n_steps_min, n_steps_max = 81, 100
   elif mode == 2:
-    N_samples = 5 * 10**3
-    n_steps_min, n_steps_max = 10, 500
+    N_samples = 5 * 10**4
+    n_steps_min, n_steps_max = 10, 300
 
   # Generate seeds.
   seeds = range(N0, N0 + N_samples)
