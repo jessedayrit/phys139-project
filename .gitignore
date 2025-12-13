@@ -426,3 +426,13 @@ db/variable_ratio/
 
 # pdf files
 *.pdf
+
+# Ignore these notebooks
+Testing.ipynb
+GenerateDatasets.ipynb
+MWPM PyMatching.py
+
+
+
+#Ignore their source model
+source-model
