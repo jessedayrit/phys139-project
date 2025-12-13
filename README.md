@@ -12,4 +12,4 @@ database_io.py contains an interface to read from the databases and easily gener
 
 plotting.py contains several utility functions for plotting only.
 
-The unmodified source model from the paper can be found in the source-model/ directory. Since it uses libraries exclusive to an older version of TensorFlow, it is recommended to set up a virtual environment to run it if desired.
+The unmodified source model from the paper is taken from https://github.com/baireuther/neural_network_decoder/tree/arXiv1705p07855 and can be found in the source-model/ directory. Since it uses libraries exclusive to an older version of TensorFlow, it is recommended to set up a virtual environment to run it if desired.
